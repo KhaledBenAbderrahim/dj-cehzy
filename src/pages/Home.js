@@ -26,7 +26,7 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section with Animated Background */}
       <section className="hero-section">
-        <div className="hero-image"></div>
+        <div className="hero-image" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/chezy1.png)`}}></div>
         <div className="hero-overlay"></div>
         <div className="palm-leaves-left"></div>
         <div className="palm-leaves-right"></div>
