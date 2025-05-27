@@ -1,0 +1,506 @@
+/* Music Page Styles */
+.music-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.music-header {
+  position: relative;
+  height: 300px;
+  background-image: url('/assets/images/music-header.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.music-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 120, 168, 0.8) 0%, rgba(30, 150, 200, 0.6) 100%);
+  z-index: 1;
+}
+
+.tropical-decoration {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.tropical-decoration.left {
+  bottom: -50px;
+  left: -50px;
+  background-image: url('/assets/images/tropical-leaves-left.png');
+}
+
+.tropical-decoration.right {
+  top: -50px;
+  right: -50px;
+  background-image: url('/assets/images/tropical-leaves-right.png');
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+/* Music Player Section */
+.music-player-section {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #0078a8;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  text-align: center;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.tracks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 4rem;
+}
+
+.track-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.track-card.playing {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.track-card.playing .track-cover {
+  animation: pulsate 2s infinite alternate;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
+
+.track-cover {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.track-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.track-card:hover .track-overlay {
+  opacity: 1;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: #ffc107;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.track-card:hover .play-button {
+  opacity: 1;
+}
+
+.track-card.playing .play-button {
+  opacity: 1;
+}
+
+.play-button:hover {
+  background: #ffffff;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.track-info {
+  padding: 1.5rem;
+}
+
+.track-info h3 {
+  color: #0078a8;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.track-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.track-genre {
+  color: #555;
+  font-size: 0.9rem;
+  background: #f0f0f0;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.track-duration {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.music-platforms {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.music-platforms h3 {
+  color: #0078a8;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.platform-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.platform-link {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.platform-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.platform-link.soundcloud {
+  background: #ff7700;
+}
+
+.platform-link.spotify {
+  background: #1db954;
+}
+
+.platform-link.mixcloud {
+  background: #52aad8;
+}
+
+/* Events Calendar Section */
+.events-calendar-section {
+  background: linear-gradient(135deg, #58c8f4 0%, #1e96c8 100%);
+  padding: 6rem 0;
+  position: relative;
+  color: #ffffff;
+}
+
+.wave-top, .wave-bottom {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.wave-top {
+  top: 0;
+  background-image: url('/assets/images/wave-top.png');
+  transform: rotate(180deg);
+}
+
+.wave-bottom {
+  bottom: 0;
+  background-image: url('/assets/images/wave-bottom.png');
+}
+
+.events-calendar-section .section-title,
+.events-calendar-section .section-description {
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.event-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .event-item {
+    flex-direction: row;
+    height: 250px;
+  }
+}
+
+.event-image {
+  flex: 0 0 35%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 200px;
+}
+
+.event-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.event-content {
+  flex: 1;
+  padding: 2rem;
+  color: #333;
+}
+
+.event-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0078a8;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.event-icon {
+  color: #ffc107;
+}
+
+.event-name {
+  font-size: 1.5rem;
+  color: #0078a8;
+  margin-bottom: 1rem;
+}
+
+.event-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.event-time {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.event-description {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.event-ticket {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffc107;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.event-ticket:hover {
+  background: #f9d59b;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-icon {
+  font-size: 16px;
+}
+
+/* Booking Section */
+.booking-section {
+  padding: 6rem 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.palm-leaves {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background-image: url('/assets/images/palm-leaves.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.booking-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .booking-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking-text {
+  color: #333;
+}
+
+.booking-text .section-title {
+  text-align: left;
+  color: #0078a8;
+}
+
+.booking-text p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.booking-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.booking-features li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.booking-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.booking-cta {
+  margin-top: 2rem;
+}
+
+.booking-image {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+}
+
+.dj-performance-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-image: url('/assets/images/dj-performance.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .booking-features li {
+    padding-left: 25px;
+  }
+  
+  .event-content {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tracks-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .platform-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

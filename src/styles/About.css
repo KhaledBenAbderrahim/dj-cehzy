@@ -1,0 +1,415 @@
+/* About Page Styles */
+.about-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.about-header {
+  position: relative;
+  height: 300px;
+  background-image: url('/assets/images/about-header.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 120, 168, 0.8) 0%, rgba(30, 150, 200, 0.6) 100%);
+  z-index: 1;
+}
+
+.palm-decoration {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background-image: url('/assets/images/palm-decoration.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 3;
+}
+
+/* Bio Section */
+.bio-section {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.bio-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.bio-image {
+  position: relative;
+}
+
+.dj-image {
+  width: 100%;
+  height: 500px;
+  background-image: url('/assets/images/dj-profile.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.dj-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 120, 168, 0.2) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: 30px;
+  right: -20px;
+  background: #ffc107;
+  color: #333;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-5deg);
+}
+
+.experience-badge .years {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.experience-badge .text {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.bio-text {
+  color: #333;
+}
+
+.bio-text .section-title {
+  color: #0078a8;
+  margin-bottom: 0.5rem;
+}
+
+.bio-subtitle {
+  color: #ffc107;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.bio-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #0078a8;
+  margin-top: 2rem;
+  transform: rotate(-5deg);
+  display: inline-block;
+}
+
+/* Specialties Section */
+.specialties-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #58c8f4 0%, #1e96c8 100%);
+  position: relative;
+  color: #ffffff;
+}
+
+.wave-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-image: url('/assets/images/wave-top.png');
+  background-size: cover;
+  background-position: center bottom;
+  transform: rotate(180deg);
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-image: url('/assets/images/wave-bottom.png');
+  background-size: cover;
+  background-position: center top;
+}
+
+.specialties-section .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.specialty-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.specialty-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px);
+}
+
+.specialty-icon {
+  width: 70px;
+  height: 70px;
+  background: #ffc107;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #333;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.specialty-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.specialty-card p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* Why Choose Me Section */
+.why-choose-section {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header .section-title {
+  color: #0078a8;
+}
+
+.section-subtitle {
+  color: #555;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-bottom: 5px solid #ffc107;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: #0078a8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 120, 168, 0.3);
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  color: #0078a8;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #58c8f4 0%, #1e96c8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.palm-leaves {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background-image: url('/assets/images/palm-leaves.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.testimonials-section .section-title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 4rem;
+  font-family: 'Georgia', serif;
+  color: #ffc107;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.testimonial-text {
+  color: #333;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author h4 {
+  color: #0078a8;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.testimonial-author span {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .bio-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .bio-image {
+    order: -1;
+  }
+  
+  .dj-image {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .experience-badge {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .specialty-card,
+  .feature-card,
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .specialty-icon,
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
