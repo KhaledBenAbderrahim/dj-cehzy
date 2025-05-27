@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import '../styles/Gallery.css';
@@ -104,7 +104,7 @@ const Gallery = () => {
     document.body.style.overflow = 'auto';
   };
 
-  const navigateImage = (direction) => {
+  const navigateImage = useCallback((direction) => {
     const currentIndex = filteredImages.findIndex(img => img.id === selectedImage);
     let newIndex;
     
@@ -115,7 +115,7 @@ const Gallery = () => {
     }
     
     setSelectedImage(filteredImages[newIndex].id);
-  };
+  }, [filteredImages, selectedImage]);
 
   // Handle keyboard navigation
   React.useEffect(() => {
@@ -133,7 +133,7 @@ const Gallery = () => {
     
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage, filteredImages]);
+  }, [selectedImage, filteredImages, navigateImage]);
 
   const selectedImageData = galleryImages.find(img => img.id === selectedImage);
 
