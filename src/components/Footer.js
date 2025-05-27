@@ -6,7 +6,7 @@ import '../styles/Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="wave-top"></div>
+      <div className="wave-top" style={{ backgroundImage: "url('../assets/images/wave-top.png')" }}></div>
       
       <div className="footer-content">
         <div className="container">
@@ -94,8 +94,8 @@ const Footer = () => {
         </div>
       </div>
       
-      <div className="tropical-decoration left"></div>
-      <div className="tropical-decoration right"></div>
+      <div className="tropical-decoration left" style={{ backgroundImage: "url('../assets/images/tropical-leaves-left.png')" }}></div>
+      <div className="tropical-decoration right" style={{ backgroundImage: "url('../assets/images/tropical-leaves-right.png')" }}></div>
     </footer>
   );
 };
